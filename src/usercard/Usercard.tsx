@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 type User = {
   id: number;
   name: string;
   email: string;
   age: number;
+  profilePicture: string;
 };
 
 const UserCard = () => {
@@ -57,6 +58,7 @@ const UserCard = () => {
       {error && <p className="error">{error}</p>}
       {user && (
         <div className="user-details">
+            <img src={user.profilePicture} alt={`${user.name}'s profile`} className="profile-picture"/>
           <p>ID: {user.id}</p>
           <p>Name: {user.name}</p>
           <p>Email: {user.email}</p>
