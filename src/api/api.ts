@@ -4,3 +4,4 @@ export const fetchUsers = async () => {
     console.log(data.users); // JSON adat
     return data.users
   };
+

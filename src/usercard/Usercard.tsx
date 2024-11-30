@@ -43,8 +43,8 @@ const UserCard = () => {
   };
 
   return (
-    <div className="card">
-      <div>
+    <div className="user-card">
+      <div className="search-section">
         <label htmlFor="userName">Enter User Name:</label>
         <input
           id="userName"
@@ -55,16 +55,22 @@ const UserCard = () => {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      {error && <p className="error">{error}</p>}
-      {user && (
-        <div className="user-details">
-            <img src={user.profilePicture} alt={`${user.name}'s profile`} className="profile-picture"/>
-          <p>ID: {user.id}</p>
-          <p>Name: {user.name}</p>
-          <p>Email: {user.email}</p>
-          <p>Age: {user.age}</p>
-        </div>
-      )}
+      <div className="results-section">
+        {error && <p className="error">{error}</p>}
+        {user && (
+          <div className="user-info">
+            <img
+              src={user.profilePicture}
+              alt={`${user.name}'s profile`}
+              className="profile-picture"
+            />
+            <p>ID: {user.id}</p>
+            <p>Name: {user.name}</p>
+            <p>Email: {user.email}</p>
+            <p>Age: {user.age}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
