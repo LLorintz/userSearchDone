@@ -64,10 +64,12 @@ const UserCard = () => {
               alt={`${user.name}'s profile`}
               className="profile-picture"
             />
-            <p>ID: {user.id}</p>
-            <p>Name: {user.name}</p>
-            <p>Email: {user.email}</p>
-            <p>Age: {user.age}</p>
+            <div className="user-details">
+              <p>ID: {user.id}</p>
+              <p>Name: {user.name}</p>
+              <p>Email: {user.email}</p>
+              <p>Age: {user.age}</p>
+            </div>
           </div>
         )}
       </div>
